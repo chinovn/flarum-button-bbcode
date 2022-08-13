@@ -1,0 +1,173 @@
+.cb-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration:none !important;
+  margin: 5px;
+  padding: 8px 16px;
+  	&:after {
+	    content: '' !important;
+	}
+}
+.standard {
+    color: #fff;
+    &:focus-visible {
+        box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+    }
+    &:hover {
+        opacity: .75;
+    }
+    &:active {
+         transform: scale(.96);
+    }
+}
+
+.standard .fas {
+    line-height: inherit;
+    &.left {
+        margin-right: 10px;
+        border-right: 1px solid rgba(255, 255, 255, 0.8);
+        padding-right: 12px;
+    }
+    &.right{
+    margin-left: 10px;
+}
+}
+
+.pulseme {
+  color: #fff;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
+  will-change: transform;
+  position: relative;
+  overflow: hidden;
+    &:hover {
+    background-blend-mode: darken;
+    box-shadow: 0 4px 3px rgba(0,0,0,0.2);
+    transform: translate3d(0, -2px, 0);
+  }
+  &:active {
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+    transform: translate3d(0, 1px, 0);
+  }
+  
+  &:before, &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,.4);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    margin: auto;
+  }
+  &:before {
+    animation: pulse 1.5s infinite linear;
+  }
+  &:after {
+    animation: pulse 2s .4s infinite linear;
+  }
+  &:hover:before, &:hover:after {
+    display: none;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  33% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+.flashme {
+  position: relative;
+  border-width: 0;
+  outline: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  color: #FFF;
+  overflow: hidden;
+&:hover {
+  background-blend-mode: darken;
+  box-shadow: 0 4px 3px rgba(0,0,0,0.2);
+  transform: translate3d(0, -2px, 0);
+}
+&:active {
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+  transform: translate3d(0, 1px, 0);
+}
+}
+.flashme:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0;
+  padding-top: 0;
+  border-radius: 100%;
+  background-color: rgba(236, 240, 241, .3);
+  transform: translate(-50%, -50%);
+}
+
+.flashme:active:before {
+  width: 120%;
+  padding-top: 120%;
+  transition: all 0.5s ease;
+}
+
+.hoverme {
+    color: #fff;
+    width: fit-content;
+
+    &:hover {
+        background-blend-mode: darken;
+    }
+    
+    &:active {
+         transform: scale(.96);
+    }
+}
+.hoverme .fas {padding-left: 13px; transition: all 0.5s ease;}
+.hoverme:hover .fas {padding-left: 18px; transform: scale(1.2); }
+
+.animateme {
+    color: #fff;
+	background-repeat:no-repeat;
+	background-position:bottom left;
+	background-image:url('/assets/extensions/chinovn-flarum-button-bbcode//button_bg.png');
+	background-position:bottom left, top right, 0 0, 0 0;
+	background-clip:border-box;
+	transition: all 0.5s ease;
+	
+
+	&:hover {
+	    background-position:top left;
+	    background-position:top left, bottom right, 0 0, 0 0;
+	}
+    &:active {
+         transform: scale(.96);
+    }
+}
+.animateme .extra {
+    background-image:	url('/assets/extensions/chinovn-flarum-button-bbcode//button_bg.png'), url('/assets/extensions/chinovn-flarum-button-bbcode//button_bg.png'),	-moz-radial-gradient(	center bottom, circle, rgba(89,208,244,1) 0,rgba(89,208,244,0) 100px), -moz-linear-gradient(#4fbbf7, #3faeeb);
+
+	background-image:	url('/assets/extensions/chinovn-flarum-button-bbcode//button_bg.png'), url('/assets/extensions/chinovn-flarum-button-bbcode//button_bg.png'),	-webkit-gradient(	radial, 50% 100%, 0, 50% 100%, 100,	from(rgba(89,208,244,1)), to(rgba(89,208,244,0))), -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4fbbf7), to(#3faeeb));
+	&:hover {
+	    filter: brightness(10%);
+	    background-image:	url('/assets/extensions/chinovn-flarum-button-bbcode//button_bg.png'), url('/assets/extensions/chinovn-flarum-button-bbcode//button_bg.png'),	-moz-radial-gradient(center bottom, circle,	rgba(109,217,250,1) 0,rgba(109,217,250,0) 100px),	-moz-linear-gradient(#63c7fe, #58bef7);
+						
+	background-image:	url('/assets/extensions/chinovn-flarum-button-bbcode//button_bg.png'), url('/assets/extensions/chinovn-flarum-button-bbcode//button_bg.png'),	-webkit-gradient(	radial, 50% 100%, 0, 50% 100%, 100,	from(rgba(109,217,250,1)), to(rgba(109,217,250,0))), -webkit-gradient(linear, 0% 0%, 0% 100%, from(#63c7fe), to(#58bef7));
+	}
+}

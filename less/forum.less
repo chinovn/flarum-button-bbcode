@@ -5,16 +5,16 @@
   border-radius: 5px;
   text-transform: uppercase;
   text-decoration:none !important;
-  margin: 5px;
+  margin: 5px 5px 5px 0;
   padding: 8px 16px;
   	&:after {
 	    content: '' !important;
 	}
 }
 .standard {
-    color: #fff;
+    color: #fff !important;
     &:focus-visible {
-        box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+        box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px !important;
     }
     &:hover {
         opacity: .75;
@@ -28,7 +28,7 @@
     line-height: inherit;
     &.left {
         margin-right: 10px;
-        border-right: 1px solid rgba(255, 255, 255, 0.8);
+        border-right: 1px solid rgba(255, 255, 255, 0.8) !important;
         padding-right: 12px;
     }
     &.right{
@@ -38,17 +38,17 @@
 
 .pulseme {
   color: #fff;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1) !important;
   will-change: transform;
   position: relative;
   overflow: hidden;
     &:hover {
     background-blend-mode: darken;
-    box-shadow: 0 4px 3px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 3px rgba(0,0,0,0.2) !important;
     transform: translate3d(0, -2px, 0);
   }
   &:active {
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1) !important;
     transform: translate3d(0, 1px, 0);
   }
   
@@ -58,7 +58,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255,255,255,.4);
+    background: rgba(255,255,255,.4) !important;
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -95,16 +95,16 @@
   position: relative;
   border-width: 0;
   outline: none;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6) !important;
   color: #FFF;
   overflow: hidden;
 &:hover {
   background-blend-mode: darken;
-  box-shadow: 0 4px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 3px rgba(0,0,0,0.2) !important;
   transform: translate3d(0, -2px, 0);
 }
 &:active {
-  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1) !important;
   transform: translate3d(0, 1px, 0);
 }
 }
@@ -117,7 +117,7 @@
   width: 0;
   padding-top: 0;
   border-radius: 100%;
-  background-color: rgba(236, 240, 241, .3);
+  background-color: rgba(236, 240, 241, .3) !important;
   transform: translate(-50%, -50%);
 }
 
@@ -143,27 +143,31 @@
 .hoverme:hover .fas {padding-left: 18px; transform: scale(1.2); }
 
 .animateme {
-    	color: #fff;
+    color: #fff;
 	background-repeat:no-repeat;
 	background-position:bottom left;
-	background-image:url('/assets/extensions/chinovn-button-bbcode/button_bg.png');
+	background-image:url('../../vendor/chinovn/custom-bbcode/src/img/button_bg.png');
 	background-position:bottom left, top right, 0 0, 0 0;
 	background-clip:border-box;
 	transition: all 0.5s ease;
+	
+
 	&:hover {
-	   	background-position:top left;
-	    	background-position:top left, bottom right, 0 0, 0 0;
+	    background-position:top left;
+	    background-position:top left, bottom right, 0 0, 0 0;
 	}
     &:active {
          transform: scale(.96);
     }
 }
 .animateme .extra {
-    	background-image:	url('/assets/extensions/chinovn-button-bbcode/button_bg.png'), url('/assets/extensions/chinovn-button-bbcode/button_bg.png'),	-moz-radial-gradient(	center bottom, circle, rgba(89,208,244,1) 0,rgba(89,208,244,0) 100px), -moz-linear-gradient(#4fbbf7, #3faeeb);
-  	background-image:	url('/assets/extensions/chinovn-button-bbcode/button_bg.png'), url('/assets/extensions/chinovn-button-bbcode/button_bg.png'),	-webkit-gradient(	radial, 50% 100%, 0, 50% 100%, 100,	from(rgba(89,208,244,1)), to(rgba(89,208,244,0))), -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4fbbf7), to(#3faeeb));
+    background-image:	url('../../vendor/chinovn/custom-bbcode/src/img/button_bg.png'), url('../../vendor/chinovn/custom-bbcode/src/img/button_bg.png'),	-moz-radial-gradient(	center bottom, circle, rgba(89,208,244,1) 0,rgba(89,208,244,0) 100px), -moz-linear-gradient(#4fbbf7, #3faeeb);
+
+	background-image:	url('../../vendor/chinovn/custom-bbcode/src/img/button_bg.png'), url('../../vendor/chinovn/custom-bbcode/src/img/button_bg.png'),	-webkit-gradient(	radial, 50% 100%, 0, 50% 100%, 100,	from(rgba(89,208,244,1)), to(rgba(89,208,244,0))), -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4fbbf7), to(#3faeeb));
 	&:hover {
-	    	filter: brightness(10%);
-	   	background-image:	url('/assets/extensions/chinovn-button-bbcode/button_bg.png'), url('/assets/extensions/chinovn-button-bbcode/button_bg.png'),	-moz-radial-gradient(center bottom, circle,	rgba(109,217,250,1) 0,rgba(109,217,250,0) 100px),	-moz-linear-gradient(#63c7fe, #58bef7);
-		background-image:	url('/assets/extensions/chinovn-button-bbcode/button_bg.png'), url('/assets/extensions/chinovn-button-bbcode/button_bg.png'),	-webkit-gradient(	radial, 50% 100%, 0, 50% 100%, 100,	from(rgba(109,217,250,1)), to(rgba(109,217,250,0))), -webkit-gradient(linear, 0% 0%, 0% 100%, from(#63c7fe), to(#58bef7));
+	    filter: brightness(10%);
+	    background-image:	url('../../vendor/chinovn/custom-bbcode/src/img/button_bg.png'), url('../../vendor/chinovn/custom-bbcode/src/img/button_bg.png'),	-moz-radial-gradient(center bottom, circle,	rgba(109,217,250,1) 0,rgba(109,217,250,0) 100px),	-moz-linear-gradient(#63c7fe, #58bef7);
+						
+	background-image:	url('../../vendor/chinovn/custom-bbcode/src/img/button_bg.png'), url('../../vendor/chinovn/custom-bbcode/src/img/button_bg.png'),	-webkit-gradient(	radial, 50% 100%, 0, 50% 100%, 100,	from(rgba(109,217,250,1)), to(rgba(109,217,250,0))), -webkit-gradient(linear, 0% 0%, 0% 100%, from(#63c7fe), to(#58bef7));
 	}
 }
